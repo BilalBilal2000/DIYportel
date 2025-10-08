@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Kit Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px,20px;
+            /* padding-top: 60px; */
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 380px;
+            width: 100%;
+            padding: 10px 25px;
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+            margin: 0 auto;
+            position: sticky;
+            top: 20px;
+            position: relative;
+        }
+
+        .logo-top {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-top img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #333;
+            font-size: 20px;
+            /* margin-bottom: 6px; */
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .portal-btn {
+            width: 100%;
+            padding: 14px 18px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 87, 108, 0.5);
+        }
+
+        .btn-icon {
+            font-size: 24px;
+        }
+
+        .btn-text {
+            font-size: 14px;
+            font-weight: 700;
+            flex: 1;
+            text-align: left;
+        }
+
+        .btn-desc {
+            display: none;
+        }
+
+        .info-box {
+            background: #f8f9ff;
+            border-left: 3px solid #667eea;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .info-box p {
+            color: #555;
+            font-size: 13px;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        .info-box ul {
+            color: #555;
+            font-size: 12px;
+            line-height: 1.5;
+            padding-left: 16px;
+        }
+
+        .footer {
+            margin-top: 15px;
+            padding-top: 12px;
+            border-top: 1px solid #e0e0e0;
+            color: #999;
+            font-size: 10px;
+        }
+
+        .footer strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 40px;
+            }
+
+            .container {
+                padding: 25px 20px;
+                top: 10px;
+                max-width: 340px;
+            }
+
+            .logo-top {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 15px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            .subtitle {
+                font-size: 11px;
+            }
+
+            .btn-icon {
+                font-size: 22px;
+            }
+
+            .btn-text {
+                font-size: 13px;
+            }
+
+            .portal-btn {
+                padding: 12px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Learning Links Foundation Logo at Top -->
+        <div class="logo-top">
+            <img src="https://www.csrbox.org/organization/org_logo/1497002726LLF.png" alt="Learning Links Foundation">
+        </div>
+
+        <h1>DIY Kit Portal</h1>
+        <p class="subtitle">Select an option to get started</p>
+
+        <div class="info-box">
+            <h3>📌 How It Works:</h3>
+            <p><strong>Before Using DIY Kits:</strong></p>
+            <ul>
+                <li>Click "Accessing DIY" to register and get kit resources</li>
+                <li>Fill in your details and select your DIY kit</li>
+                <li>Access instructional materials via Google Drive</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>After Using DIY Kits:</strong></p>
+            <ul>
+                <li>Click "Feedback" to upload photos of completed projects</li>
+                <li>Share your experience and results</li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <a href="DIYfrom.html" class="portal-btn btn-primary" target="_blank">
+                <div class="btn-icon">📋</div>
+                <div class="btn-text">Accessing DIY</div>
+                <div class="btn-desc">Register & Get Kit Resources</div>
+            </a>
+
+            <a href="feedback.html" class="portal-btn btn-secondary" target="_blank">
+                <div class="btn-icon">📸</div>
+                <div class="btn-text">Feedback</div>
+                <div class="btn-desc">Upload Photos & Share Results</div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>Developed & Maintained by <strong>Bilal Shaikh</strong></p>
+        </div>
+    </div>
+</body>
+</html>
